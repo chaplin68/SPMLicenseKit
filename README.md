@@ -16,7 +16,7 @@ Package.swiftに以下を追加してください:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/kuropuged/SPMLicenseKit.git", from: "1.0.0")
+    .package(url: "https://github.com/chaplin68/SPMLicenseKit.git", from: "1.0.0")
 ]
 ```
 
