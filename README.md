@@ -1,11 +1,11 @@
 # SPMLicenseKit
 
-SPMLicenseKitは、Swift Package Manager (SPM) で管理されているライブラリの情報とライセンス情報を自動的に取得するSwiftパッケージです。
+SPMLicenseKitは、Swift Package Manager (SPM) で管理されているライブラリの情報とライセンス情報を自動的に取得するSwiftパッケージ。
 
 ## 特徴
 
-- **自動パス検出**: ビルド時と実行時の両方でworkspace-state.jsonとDerivedDataの場所を自動的に検出
-- **ライセンス情報の取得**: 各SPMライブラリのライセンスタイプとライセンステキストを取得
+- **自動パス検出**: ビルド時にworkspace-state.jsonとDerivedDataの場所を自動的に検出
+- **ライセンス情報の取得**: 各SPMライブラリのライセンステキストを取得
 - **プラグイン統合**: Swift Package Managerのプラグインを活用して環境に依存しないパス検出
 
 ## インストール方法
@@ -32,8 +32,7 @@ import SPMLicenseKit
 // ライセンス情報を読み込み
 SPMLicense.libraries.forEach { license in
   print("Name: \(library.name)")
-  print("Version: \(library.version)")
-  print("License: \(library.license?.type.rawValue ?? "Unknown")")
+  print("License: \(library.licenseBody ?? "")")
 }
 ```
 ## ライセンス
